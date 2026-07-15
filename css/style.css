@@ -1,0 +1,992 @@
+/* =========================
+   ZEN BALANCE - STYLE.CSS
+   ========================= */
+
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
+
+:root {
+
+    /* Negro lujo */
+    --black: #080808;
+    --black-soft: #121212;
+
+    /* Dorados */
+    --gold: #D4AF37;
+    --gold-light: #F5D77A;
+    --gold-dark: #8C6A16;
+
+    /* Champagne */
+    --champagne: #E8D8B0;
+
+    /* Verde botella (bienestar) */
+    --emerald: #12352D;
+
+    /* Fondo claro */
+    --cream: #F6F0E5;
+
+    /* Blanco */
+    --white: #FFFFFF;
+
+    --text: #222222;
+
+}
+
+
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+
+body {
+
+    font-family: 'Outfit', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+
+}
+
+
+a {
+
+    text-decoration: none;
+    color: inherit;
+
+}
+
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+
+header {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+}
+
+
+.navbar {
+
+    width: 90%;
+    max-width: 1400px;
+
+    margin: 25px auto 0;
+
+    padding: 18px 35px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background: var(--black);
+
+    backdrop-filter: blur(20px);
+    border-radius: 60px;
+}
+
+
+
+.logo img {
+    width: 90px;
+    height: auto;
+    display: block;
+
+}
+
+
+.menu {
+
+    display: flex;
+    gap: 40px;
+    list-style: none;
+}
+
+
+.menu a {
+
+    position: relative;
+    color: var(--gold);
+    font-size: 24px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: .4s;
+}
+
+
+
+/* línea dorada animada */
+.menu a::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -8px;
+
+    left: 50%;
+
+    width: 0;
+
+    height: 2px;
+
+    background: var(--gold);
+
+    transition: .3s;
+
+    transform: translateX(-50%);
+
+}
+
+
+
+.menu a:hover {
+    color: #FFD700;
+
+    text-shadow:
+        0 0 10px rgba(212, 175, 55, .8);
+
+}
+
+
+
+.menu a:hover::after {
+
+    width: 100%;
+
+}
+
+
+
+
+/* BOTÓN SANDWICH */
+
+.menu-btn {
+    display: none;
+    color: #FFD700;
+    font-size: 32px;
+    cursor: pointer;
+}
+
+
+
+
+/* RESPONSIVE */
+
+@media(max-width:900px) {
+   
+    .navbar {
+        padding: 15px 25px;
+    }
+    .menu-btn {
+        display: block;
+    }
+
+    .menu {
+        position:fixed;
+        top:25px;
+        left:50%;
+        transform:translateX(-50%);
+
+        width:min(92%,1400px);
+
+        padding:18px 40px;
+
+        background:rgba(8,8,8,.75);
+
+        backdrop-filter:blur(18px);
+
+        border:1px solid rgba(200,162,74,.18);
+
+        border-radius:60px;
+
+        z-index:1000;
+
+        transition:.35s;
+    }
+    
+
+
+
+    .menu.active {
+        display: flex;
+    }
+
+
+
+    .menu a {
+        color: var(--gold);
+    }
+
+    .menu a:hover {
+        color: #FFD700;
+        text-shadow:
+            0 0 15px rgba(212, 175, 55, .8);
+    }
+
+    .logo img {
+        width: 140px;
+    }
+
+
+}
+
+
+/*********************
+INI HERO 
+*********************/
+
+.hero{
+    background:#111;
+    position:relative;
+    overflow:hidden;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:70px;
+}
+
+.container{
+    max-width:1200px;
+    width:100%;
+}
+
+.logo{
+    width:440px;
+    margin-bottom:5px;
+}
+
+
+
+.gold{
+background:#C9A227;
+color:#111;
+}
+
+.gold:hover{
+background:#E4C15E;
+transform:translateY(-3px);
+}
+
+.outline{
+border:2px solid #C9A227;
+color:#C9A227;
+}
+
+.outline:hover{
+background:#C9A227;
+color:#111;
+}
+
+
+
+
+.hero:before{
+content:"";
+position:absolute;
+width:500px;
+height:500px;
+border:2px solid #C9A227;
+border-radius:50%;
+top:-200px;
+right:-180px;
+opacity:.2;
+}
+
+.hero:after{
+content:"";
+position:absolute;
+width:400px;
+height:400px;
+border:2px solid #C9A227;
+border-radius:50%;
+bottom:-180px;
+left:-150px;
+opacity:.15
+}
+
+/*********************
+END HERO 
+*********************/
+
+p{
+    font-size:20px;
+    line-height:1.7;
+    color:#ddd;
+    max-width:750px;
+    margin-bottom:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 38px;
+    text-decoration:none;
+    border-radius:50px;
+    font-weight:600;
+    margin-right:15px;
+    transition:.3s;
+}
+
+.label {
+
+    display: inline-block;
+
+    padding: 8px 20px;
+
+    border-radius: 50px;
+
+    background: rgba(125, 150, 117, .15);
+
+    color: var(--green);
+
+    font-weight: 600;
+
+    margin-bottom: 25px;
+
+}
+
+
+
+/* =========================
+   TITULOS
+========================= */
+
+
+.section-title {
+
+    text-align: center;
+
+    max-width: 700px;
+
+    margin: 0 auto 70px;
+
+}
+
+
+
+.section-title span {
+
+    color: var(--green);
+
+    font-weight: 600;
+
+    letter-spacing: 2px;
+
+}
+
+
+
+.section-title h2 {
+
+    margin-top: 15px;
+
+    font-size: clamp(35px, 4vw, 55px);
+
+    color: var(--dark);
+
+}
+
+
+
+.section-title p {
+
+    margin-top: 20px;
+
+    font-size: 18px;
+
+    line-height: 1.7;
+
+}
+
+
+
+/* =========================
+   SERVICIOS
+========================= */
+
+
+.services-section {
+
+    background: white;
+
+    padding: 100px 5%;
+
+}
+
+
+
+.services-grid {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(12, 1fr);
+
+    gap: 25px;
+
+}
+
+
+
+.service-card {
+
+    height: 420px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    border-radius: 35px;
+
+}
+
+
+
+.service-card img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .6s;
+
+}
+
+
+
+.service-card:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+
+.service-card::after {
+
+    content: "";
+
+    position: absolute;
+
+    inset: 0;
+
+    background: linear-gradient(to top,
+            rgba(15, 25, 20, .9),
+            transparent);
+
+}
+
+
+
+.service-content {
+
+    position: absolute;
+
+    z-index: 2;
+
+    bottom: 35px;
+
+    left: 35px;
+
+    right: 30px;
+
+    color: white;
+
+}
+
+
+
+.service-content h3 {
+
+    font-size: 32px;
+
+    margin-bottom: 15px;
+
+}
+
+
+
+.service-content p {
+
+    line-height: 1.6;
+
+}
+
+
+
+.icon {
+
+    position: absolute;
+
+    z-index: 3;
+
+    right: 30px;
+
+    top: 25px;
+
+    width: 60px;
+
+    height: 60px;
+
+    background: rgba(255, 255, 255, .2);
+
+    backdrop-filter: blur(10px);
+
+    border-radius: 50%;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    font-size: 28px;
+
+}
+
+
+
+.relax {
+
+    grid-column: span 5;
+
+}
+
+
+.sport {
+
+    grid-column: span 7;
+
+}
+
+
+.therapy {
+
+    grid-column: span 7;
+
+}
+
+
+.deep {
+
+    grid-column: span 5;
+
+}
+
+
+.training,
+.nutrition {
+
+    grid-column: span 6;
+
+}
+
+
+
+
+/* =========================
+   SOBRE NOSOTROS
+========================= */
+
+
+.about-section {
+
+    padding: 100px 8%;
+
+}
+
+
+
+.about-container {
+
+    max-width: 1400px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 70px;
+
+    align-items: center;
+
+}
+
+
+
+.about-image img {
+
+    width: 100%;
+
+    height: 600px;
+
+    object-fit: cover;
+
+    border-radius: 40px;
+
+}
+
+
+
+.about-text h2 {
+
+    font-size: 50px;
+
+    color: var(--dark);
+
+    margin: 20px 0;
+
+}
+
+
+
+.about-text p {
+
+    font-size: 18px;
+
+    line-height: 1.8;
+
+}
+
+
+
+.check-list {
+
+    list-style: none;
+
+    margin-top: 25px;
+
+}
+
+
+
+.check-list li {
+
+    margin: 15px 0;
+
+    font-size: 18px;
+
+}
+
+
+
+.check-list li::before {
+
+    content: "✓";
+
+    color: var(--green);
+
+    margin-right: 15px;
+
+}
+
+
+
+/* =========================
+   PROCESO
+========================= */
+
+
+.process {
+
+    background: white;
+
+    padding: 100px 8%;
+
+}
+
+
+
+.process-grid {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+
+.step {
+
+    background: #f8f7f3;
+
+    padding: 40px;
+
+    border-radius: 30px;
+
+}
+
+
+
+.number {
+
+    width: 60px;
+
+    height: 60px;
+
+    border-radius: 50%;
+
+    background: var(--green);
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 25px;
+
+    margin-bottom: 20px;
+
+}
+
+
+
+
+
+
+/* =========================
+   CTA
+========================= */
+
+
+.cta {
+
+    padding: 100px 8%;
+
+    text-align: center;
+
+}
+
+
+
+.cta h2 {
+
+    font-size: 55px;
+
+    color: var(--dark);
+
+    margin-bottom: 20px;
+
+}
+
+
+
+/* =========================
+   FOOTER
+========================= */
+
+
+footer {
+
+    background: #18231f;
+
+    color: white;
+
+    padding: 50px 8%;
+
+}
+
+
+
+.footer-grid {
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 40px;
+
+}
+
+
+
+footer p {
+
+    color: #ccc;
+
+    margin-top: 10px;
+
+}
+
+
+
+.copy {
+
+    text-align: center;
+
+    margin-top: 40px;
+
+    color: #aaa;
+
+}
+
+
+
+/* =========================
+   ANIMACION
+========================= */
+
+
+@keyframes fade {
+
+    from {
+
+        opacity: 0;
+        transform: translateY(30px);
+
+    }
+
+
+    to {
+
+        opacity: 1;
+        transform: none;
+
+    }
+
+}
+
+
+
+/* =========================
+   TABLET Y MOVIL
+========================= */
+
+
+@media(max-width:900px) {
+
+
+
+    .hero-container {
+
+        grid-template-columns: 1fr;
+
+        padding-top: 120px;
+
+    }
+
+
+
+    .hero-image {
+
+        order: -1;
+
+    }
+
+
+
+    .hero-image img {
+
+        height: 420px;
+
+    }
+
+
+
+    .floating-card {
+
+        left: 20px;
+
+    }
+
+
+
+    .services-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .relax,
+    .sport,
+    .therapy,
+    .deep,
+    .training,
+    .nutrition {
+
+        grid-column: auto;
+
+    }
+
+
+
+    .about-container {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .about-image img {
+
+        height: 420px;
+
+    }
+
+
+
+    .process-grid,
+    .review-grid,
+    .footer-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+
+    .about-text h2 {
+
+        font-size: 38px;
+
+    }
+
+
+
+    .cta h2 {
+
+        font-size: 38px;
+
+    }
+
+
+
+}
