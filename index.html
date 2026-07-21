@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 
 </head>
 
@@ -18,72 +18,68 @@
 <body>
 
 
-    <header>
-        <nav class="navbar">
+   <header>
 
-            <div class="logo">
+    <nav class="navbar">
 
-                <img src="img/logo.png" alt="MM Fitness & Massage">
+    <div class="logo">
+         <img src="img/logo.png" alt="MM Fitness & Massage">
+    </div>
 
-            </div>
+    <ul class="menu">
+        <li><a href="#">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#aboutme">Acerca de mi</a></li>
+        <li><a href="#contact">Contacto</a></li>
+    </ul>
 
-            <ul class="menu">
-                <li><a href="#">Inicio</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="#aboutme">Equipo</a></li>
-                <li><a href="#contact">Contacto</a></li>
+    <div class="menu-btn">
+        ☰
+    </div>
 
-            </ul>
-
-            <div class="menu-btn">
-                ☰
-            </div>
-
-        </nav>
-    </header>
-
-
-
-
-
+</nav>
+</header>
             <section class="hero">
-
+            
                 <div class="container">
-
-                    <img src="img/hero.png" class="logo">
-                   <p>
-                        Masajes personalizados, entrenamiento personal y nutrición para ayudarte a sentirte mejor, más
-                        fuerte y con más energía.
+            
+                    <img src="img/hero.png" class="logo" alt="Logo">
+                    <p class="hero-text">
+                        Tu bienestar empieza aquí.<br>
+                        <span>Masajes · Entrenamiento Personal · Nutrición</span>
                     </p>
+                    <div class="hero-buttons">
+                        <a href="#servicios" class="btn gold">
+                            Servicios
+                        </a>
+            
+                        <a href="https://wa.me/34622699384?text=Mensaje desde la web de Mmasajes:" class="btn outline"
+                            target="_blank" title="WhatsApp">
+                              <i class="fa-brands fa-whatsapp"></i>  Contacta
+                        </a>
 
-                    <a href="#servicios" class="btn gold">
-                        Servicios
-                    </a>
-
-                
-
-                    <a href="https://wa.me/34622699384?text=Mensaje desde la web de Mmasajes:" class="btn outline"
-                    target="_blank" title="whatsapp-masajes">
-                  
-                        Contacta
-                  
-                </a>
-
+                         <a href="https://instagram.com/manolomoreno1806"
+       class="btn outline"
+       target="_blank">
+        <i class="fa-brands fa-instagram instagram-icon"></i>
+        Instagram
+    </a>
+                    </div>
                 </div>
-
             </section>
 
 
-    <section class="services-section" id="servicios">
+<section class="services-section" id="servicios">
 
 
         <div class="section-title">
 
-            <span>Nuestros servicios</span>
+          <span class="section-tag">SERVICIOS</span>
 
-            <h2>
-                Tratamientos diseñados para ti
-            </h2>
+           <h2 class="section-title">
+        Todo lo que necesitas para
+        <span>sentirte mejor.</span>
+    </h2>
 
          
 
@@ -274,239 +270,107 @@
 
     </section>
 
+<section class="about-section">
 
-    <section class="about-section">
+    <div class="about-container">
 
-
-        <div class="about-container">
-
-
-            <div class="about-image">
-
-                <img
-                    src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=1000&q=80">
-
+        <!-- Imagen -->
+        <div class="about-image">
+            <div class="image-frame">
+                <img src="img/about-me.png" alt="Manolo - Entrenador Personal">
             </div>
-
-
-
-            <div class="about-text">
-
-                <span>SOBRE MI</span>
-
-                <h2>
-                    Un enfoque integral para sentirte mejor
-                </h2>
-
-
-                <p>
-                    Creemos que el bienestar no depende de una sola cosa.
-                    Por eso combinamos terapias manuales, movimiento y nutrición para crear una experiencia
-                    personalizada.
-                </p>
-
-
-                <ul class="check-list">
-
-                    <li>Tratamientos adaptados a cada persona</li>
-
-                    <li>Profesionales especializados</li>
-
-                    <li>Ambiente tranquilo y privado</li>
-
-                    <li>Seguimiento personalizado</li>
-
-                </ul>
-
-
-            </div>
-
-
         </div>
 
+        <!-- Texto -->
+        <div class="about-text">
 
-    </section>
+    <span class="about-tag">SOBRE MÍ</span>
 
+    <h2>
+        Entrena tu cuerpo.
+        <span>Fortalece tu mente.</span>
+    </h2>
 
+<div class="about-pillars">
 
+    <div class="pillar">
+        <span class="pillar-icon">🏋️</span>
+        <span>ENTRENO</span>
+    </div>
 
-    <section class="process">
+    <div class="pillar">
+        <span class="pillar-icon">❤️</span>
+        <span>SALUD</span>
+    </div>
 
+    <div class="pillar">
+        <span class="pillar-icon">🧠</span>
+        <span>MENTALIDAD</span>
+    </div>
 
-        <div class="section-title">
+</div>
 
-            <span>NUESTRO MÉTODO</span>
+    <p>
+        Soy <strong>Manolo</strong>, entrenador personal y especialista en bienestar.
+        Desde hace años acompaño a personas que quieren perder grasa, ganar fuerza,
+        recuperar energía o, simplemente, volver a sentirse bien consigo mismas.
+    </p>
 
-            <h2>
-                Tres pasos hacia tu bienestar
-            </h2>
+    <p>
+        Creo en el entrenamiento inteligente, en los hábitos que perduran y en cuidar
+        el cuerpo desde dentro. Porque verse bien es una consecuencia;
+        sentirse bien es el verdadero objetivo.
+    </p>
 
+    <ul class="check-list">
+        <li>Entrenamientos 100% personalizados</li>
+        <li>Mejora de fuerza, salud y rendimiento</li>
+        <li>Hábitos sostenibles y resultados duraderos</li>
+        <li>Acompañamiento y seguimiento continuo</li>
+    </ul>
+
+    <p class="about-final">
+        Si has llegado hasta aquí, bienvenido. Este es un espacio para aprender,
+        motivarte y demostrarte que el cambio es posible.
+        <strong>Vamos a por tu mejor versión.</strong>
+    </p>
+
+</div>
+
+    </div>
+
+</section>    
+
+<footer class="footer">
+
+    <div class="footer-content">
+
+        <div class="footer-logo">
+            <h2>FITNESS & MASSAGE</h2>
+            <p>Entreno · Salud · Mentalidad</p>
         </div>
 
-
-
-        <div class="process-grid">
-
-
-            <div class="step">
-
-                <div class="number">
-                    1
-                </div>
-
-                <h3>
-                    Valoración
-                </h3>
-
-                <p>
-                    Analizamos tus necesidades, objetivos y estado físico.
-                </p>
-
-            </div>
-
-
-
-            <div class="step">
-
-                <div class="number">
-                    2
-                </div>
-
-                <h3>
-                    Plan personalizado
-                </h3>
-
-                <p>
-                    Diseñamos un tratamiento adaptado a ti.
-                </p>
-
-            </div>
-
-
-
-            <div class="step">
-
-                <div class="number">
-                    3
-                </div>
-
-                <h3>
-                    Evolución
-                </h3>
-
-                <p>
-                    Seguimos tu progreso para conseguir resultados reales.
-                </p>
-
-            </div>
-
-
+        <div class="footer-info">
+            <p>📍 Arenys de Mar</p>
+            <p>📞 +34 622 699 384</p>
+            <p>✉️ info@mmfitness.es</p>
         </div>
 
+    </div>
 
-    </section>
+    <div class="footer-copy">
+        <p>© 2026 MM · Todos los derechos reservados.</p>
+    </div>
 
+</footer>
 
+ <button id="scrollTop" aria-label="Volver arriba">
+    ↑
+</button>   
 
+<script>
 
-
-
-
-    <section class="cta">
-
-
-        <h2>
-            ¿Preparado para empezar?
-        </h2>
-
-
-        <p>
-            Reserva tu primera sesión y descubre un nuevo concepto de bienestar.
-        </p>
-
-
-        <a href="#" class="btn primary">
-            Reservar cita
-        </a>
-
-
-    </section>
-
-
-
-
-
-    <footer>
-
-
-        <div class="footer-grid">
-
-
-            <div>
-
-                <h3>
-                    Mm
-                </h3>
-
-                <p>
-                    Masajes · Entrenamiento · Nutrición
-                </p>
-
-            </div>
-
-
-
-            <div>
-
-                <h3>
-                    Contacto
-                </h3>
-
-                <p>
-                    📍 Tu dirección aquí</p>
-
-                <p>
-                    📞 +34 600 000 000
-                </p>
-
-            </div>
-
-
-
-            <div>
-
-                <h3>
-                    Horario
-                </h3>
-
-                <p>
-                    Lunes - Viernes</p>
-
-                <p>
-                    09:00 - 20:00
-                </p>
-
-            </div>
-
-
-        </div>
-
-
-
-        <div class="copy">
-
-            © 2026 mm. Todos los derechos reservados.
-
-        </div>
-
-
-    </footer>
-
-
-
-    <script>
-
-      const menuBtn = document.querySelector(".menu-btn");
+const menuBtn = document.querySelector(".menu-btn");
 const menu = document.querySelector(".menu");
 
 menuBtn.addEventListener("click", () => {
@@ -515,8 +379,28 @@ menuBtn.addEventListener("click", () => {
 
 });
 
-    </script>
+const scrollBtn = document.getElementById("scrollTop");
 
+window.addEventListener("scroll", () => {
+
+    if (window.scrollY > 400) {
+        scrollBtn.classList.add("show");
+    } else {
+        scrollBtn.classList.remove("show");
+    }
+
+});
+
+scrollBtn.addEventListener("click", () => {
+
+    window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+    });
+
+});
+
+</script>
 
 </body>
 
