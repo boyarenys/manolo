@@ -70,7 +70,7 @@ a {
 
 header {
 
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -302,9 +302,10 @@ INI HERO
     overflow:hidden;
     min-height:100vh;
     display:flex;
+    align-items:flex-start; /* en lugar de center */
+    padding:180px 20px 70px;
     align-items:center;
     justify-content:center;
-    padding:160px 20px 70px;
     text-align:center;
 }
 
@@ -316,11 +317,11 @@ INI HERO
     margin:auto;
     z-index:2;
 }
-.logo{
-    width:100%;
-    max-width:440px;
-    height:auto;
-    margin-bottom:20px;
+
+.hero .logo{
+    width: 100%;
+    max-width: 440px;
+    margin: 70px auto 20px;
 }
 
 .hero p{
@@ -454,11 +455,12 @@ TABLET
 
 @media (max-width:768px){
 
-    .hero{
-        padding:60px 20px;
+   .hero{
+        padding-top:250px;
     }
 
-    .logo{
+    .hero .logo{
+        margin-top:70px;
         max-width:320px;
     }
 
