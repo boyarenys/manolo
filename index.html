@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
@@ -9,9 +10,7 @@
 
     <meta name="description"
 content="Masajes, entrenamiento personal y nutrición en Arenys de Mar. Servicio profesional también a domicilio. Reserva tu sesión">
- <!-- Favicons -->
-    <link href="img/favicon.png" rel="icon">
-    
+
 <meta name="keywords"
 content="masajes Arenys de Mar, masajista Arenys de Mar, entrenamiento personal Arenys de Mar, masaje deportivo, masaje relajante, nutrición, entrenador personal Maresme">
 
@@ -54,7 +53,7 @@ content="masajes Arenys de Mar, masajista Arenys de Mar, entrenamiento personal 
 
         <div class="container">
 
-           <img src="img/hero.png" class="logo" alt="Masajes y Entrenamiento Personal en Arenys de Mar">
+            <img src="img/hero.png" class="logo" alt="Masajes y Entrenamiento Personal en Arenys de Mar">
             <p class="hero-text">
                 Tu bienestar empieza aquí.<br>
                 <span>Masajes · Entrenamiento Personal · Nutrición</span>
@@ -568,6 +567,17 @@ de tus datos personales contactando directamente con el responsable.
             menu.classList.toggle("active");
 
         });
+
+        const menuLinks = document.querySelectorAll(".menu a");
+
+menuLinks.forEach(link => {
+    link.addEventListener("click", () => {
+        menu.classList.remove("active");
+    });
+});
+
+
+
 
         const scrollBtn = document.getElementById("scrollTop");
 
