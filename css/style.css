@@ -1,8 +1,3 @@
-/* =========================
-   ZEN BALANCE - STYLE.CSS
-   ========================= */
-
-
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
 
 
@@ -309,7 +304,7 @@ INI HERO
     display:flex;
     align-items:center;
     justify-content:center;
-    padding:70px 20px;
+    padding:160px 20px 70px;
     text-align:center;
 }
 
@@ -602,11 +597,8 @@ p{
 .section-title h2 {
 
     margin-top: 15px;
-
     font-size: clamp(35px, 4vw, 55px);
-
     color: var(--dark);
-
 }
 
 
@@ -1122,62 +1114,229 @@ p{
 
 
 
-/*=========================
-    FOOTER
-=========================*/
+/********************************
+CONTACTO
+********************************/
 
-.footer{
-    background:#0f0f0f;
-    border-top:1px solid rgba(201,162,39,.15);
-    padding:60px 8% 25px;
+.contacto-section{
+    background:#161616;
+    padding:80px 20px;
 }
 
-.footer-content{
+.container-contacto{
     max-width:1200px;
     margin:auto;
+
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:60px;
+    align-items:center;
+}
+
+.contacto-info h2{
+    color:#C9A227;
+    margin-bottom:25px;
+    font-size:2rem;
+}
+
+.contacto-info p{
+    color:#ddd;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.telefono{
+    display:inline-flex;
+    align-items:center;
+    gap:12px;
+
+    background:#C9A227;
+    color:#111;
+    text-decoration:none;
+
+    padding:15px 28px;
+    border-radius:50px;
+
+    font-weight:bold;
+    transition:.3s;
+}
+
+.telefono:hover{
+    transform:translateY(-3px);
+}
+
+.contacto-mapa iframe{
+    width:100%;
+    height:320px;
+    border:0;
+    border-radius:12px;
+}
+
+
+/********************************
+FOOTER
+********************************/
+footer{
+    background:#080808;
+    border-top:2px solid #C9A227;
+    padding:30px 20px;
+    
+}
+
+
+
+footer::before{
+
+    content:"";
+
+    position:absolute;
+    top:0;
+    left:0;
+
+    width:100%;
+    height:3px;
+
+    background:linear-gradient(
+        90deg,
+        transparent,
+        #C9A227,
+        #f0d36a,
+        #C9A227,
+        transparent
+    );
+
+}
+
+.footer-container{
+    max-width:1200px;
+    margin:auto;
+ background:#080808;
     display:flex;
     justify-content:space-between;
     align-items:center;
     gap:40px;
+    flex-wrap:wrap;
+
+    padding-top:10px;
+
+    color:#d5d5d5;
+    font-size:.95rem;
 }
 
-.footer-logo h2{
+.footer-container p,
+.footer-container span{
+    margin:0;
+}
+
+.footer-container nav{
+    display:flex;
+    align-items:center;
+    gap:15px;
+}
+
+.footer-container nav a,
+.footer-container a{
     color:#C9A227;
-    font-size:2rem;
-    margin-bottom:10px;
-    letter-spacing:2px;
+    text-decoration:none;
+    transition:.3s;
 }
 
-.footer-logo p,
-.footer-info p{
-    color:#aaa;
-    line-height:1.8;
-    margin:4px 0;
+.footer-container nav a:hover,
+.footer-container a:hover{
+    color:#fff;
 }
 
-.footer-copy{
-    margin-top:40px;
-    padding-top:20px;
-    border-top:1px solid rgba(255,255,255,.08);
-    text-align:center;
+.footer-container nav span{
+    color:#555;
 }
 
-.footer-copy p{
-    color:#777;
-    font-size:.9rem;
-}
+@media(max-width:768px){
 
-/* Responsive */
-
-@media (max-width:768px){
-
-    .footer-content{
+    .footer-container{
         flex-direction:column;
         text-align:center;
+        gap:18px;
     }
 
 }
 
+
+/*=========================
+    MODAL
+=========================*/
+.modal{
+
+    position:fixed;
+    inset:0;
+
+    background:rgba(0,0,0,.75);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:9999;
+
+}
+
+.modal.activo{
+    display:flex;
+}
+
+.modal-box{
+
+    width:min(700px,90%);
+    max-height:80vh;
+
+    overflow:auto;
+
+    background:#181818;
+
+    color:#ddd;
+
+    border-radius:12px;
+
+    padding:35px;
+
+    position:relative;
+
+    border:1px solid #C9A227;
+
+}
+
+.modal-box h2{
+
+    color:#C9A227;
+    margin-bottom:20px;
+
+}
+
+.modal-box p{
+
+    line-height:1.8;
+    margin-bottom:15px;
+
+}
+
+.cerrar{
+
+    position:absolute;
+
+    right:18px;
+    top:12px;
+
+    background:none;
+
+    border:none;
+
+    color:#fff;
+
+    font-size:30px;
+
+    cursor:pointer;
+
+}
 /*=========================
     SCROLL TO TOP
 =========================*/
@@ -1345,10 +1504,7 @@ p{
         font-size: 38px;
 
     }
-
-
-
-    
-
-
 }
+
+
+
